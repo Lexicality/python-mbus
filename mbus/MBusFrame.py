@@ -7,7 +7,7 @@ class MBusFrame(Structure):
         return "MBusFrame: XXX"
 
 MBusFrame._fields_ = [
-        ("start1",   c_uint8 * 16),  # MBusFrameFixed
+        ("start1",   c_uint8),  # MBusFrameFixed
         ("length1",  c_uint8),
         ("length2",  c_uint8),
         ("start2",   c_uint8),
@@ -18,7 +18,7 @@ MBusFrame._fields_ = [
         ("stop",     c_uint8),
         ("data",     c_uint8 * 252),
         ("data_size", c_size_t),
-        ("stop",      c_uint8),
+        ("type",      c_uint8),
         ("timestamp", c_time_t),
         ("next",      POINTER(MBusFrame))
 ]

@@ -319,7 +319,7 @@ class MBusLib(object):
         self.data_variable_xml_normalized           = \
                 lib.mbus_data_variable_xml_normalized
         self.data_variable_xml_normalized.argtypes  = [
-                mbus_value_information_block_p]
+                mbus_data_variable_p]
         self.data_variable_xml_normalized.restype   = c_char_p
 
         self.scan_2nd_address_range         = lib.mbus_scan_2nd_address_range
